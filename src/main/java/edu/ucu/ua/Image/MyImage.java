@@ -1,4 +1,4 @@
-package edu.ucu.ua.Images;
+package edu.ucu.ua.Image;
 
 public interface MyImage {
     void display();

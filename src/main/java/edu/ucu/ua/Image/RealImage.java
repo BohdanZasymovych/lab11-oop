@@ -1,4 +1,4 @@
-package edu.ucu.ua.Images;
+package edu.ucu.ua.Image;
 
 import javax.swing.JFrame;
 import javax.swing.ImageIcon;
