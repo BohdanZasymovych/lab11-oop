@@ -1,0 +1,8 @@
+edu/ucu/ua/MailSystem/Client.class
+edu/ucu/ua/MailSystem/MailStrategies/GiftMailStrategy.class
+edu/ucu/ua/MailSystem/Client$ClientBuilder.class
+edu/ucu/ua/MailSystem/MailBox.class
+edu/ucu/ua/MailSystem/MailStrategies/GreetingMailStrategy.class
+edu/ucu/ua/MailSystem/Sex.class
+edu/ucu/ua/MailSystem/MailStrategies/MailStrategy.class
+edu/ucu/ua/MailSystem/Mailinfo.class
