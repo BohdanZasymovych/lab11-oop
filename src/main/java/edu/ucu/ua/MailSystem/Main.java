@@ -15,7 +15,13 @@ public class Main {
         MailjetClient client;
         MailjetRequest request;
         MailjetResponse response;
-        client = new MailjetClient(API_KEY, API_SECRET, new ClientOptions("v3.1"));
+
+        ClientOptions options = ClientOptions.builder()
+                .apiKey(System.getenv("API_KEY"))
+                .apiSecretKey(System.getenv("API_SECRET"))
+                .build();
+
+        client = new MailjetClient(options);
         request = new MailjetRequest(Emailv31.resource)
                 .property(Emailv31.MESSAGES, new JSONArray()
                         .put(new JSONObject()

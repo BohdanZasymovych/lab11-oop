@@ -9,11 +9,19 @@ import com.mailjet.client.MailjetRequest;
 import com.mailjet.client.MailjetResponse;
 import com.mailjet.client.resource.Emailv31;
 
+import lombok.SneakyThrows;
+
 import edu.ucu.ua.MailSystem.MailStrategies.MailStrategy;
 
 public class MailSender {
+    @SneakyThrows
     public static void sendMail(Mailinfo info, String senderEmail, String senderName) {
-        MailjetClient client = new MailjetClient(API_KEY, API_SECRET, new ClientOptions("v3.1"));  
+        ClientOptions options = ClientOptions.builder()
+                .apiKey(System.getenv("API_KEY"))
+                .apiSecretKey(System.getenv("API_SECRET"))
+                .build();
+
+        MailjetClient client = new MailjetClient(options);
         MailjetRequest request = MailInfoToMailjetRequest(info, senderEmail, senderName);
         
         MailjetResponse response = client.post(request);
